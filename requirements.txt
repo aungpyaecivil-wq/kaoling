@@ -1,0 +1,8 @@
+# Add your project dependencies here, example:
+# nbformat
+# numpy
+# pandas
+# matplotlib
+
+# You can freeze exact versions using:
+# pip freeze > requirements.txt
