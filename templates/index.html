@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Recipe generator</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+            padding: 2rem;
+        }
+
+        .card {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            width: 100%;
+        }
+
+        input[type=text] {
+            padding: .5rem;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: .5rem;
+            padding: .6rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Dish → Ingredients & Recipe</h1>
+        <form method="post" action="/generate">
+            <label for="dish">Enter dish name</label>
+            <input id="dish" name="dish" type="text" placeholder="e.g. spicy fried rice" required />
+            <button type="submit">Generate</button>
+        </form>
+        <p style="margin-top:1rem; color:#666;">Tip: set the environment variable <code>OPENAI_API_KEY</code> to use a
+            GPT-based backend. Otherwise a local fallback will be used.</p>
+    </div>
+</body>
+
+</html>

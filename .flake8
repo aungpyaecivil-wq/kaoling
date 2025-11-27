@@ -1,0 +1,7 @@
+[flake8]
+exclude = .venv, .git,__pycache__,docs
+max-line-length = 88
+
+# Ignore F401 (unused imports) from vendor packages in site-packages when scanning
+per-file-ignores =
+    .venv/*: ALL

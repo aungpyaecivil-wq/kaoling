@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Recipe result</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+            padding: 2rem;
+        }
+
+        .card {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        pre {
+            background: #f7f7f7;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Recipe for "{{ dish }}"</h1>
+
+        {% if error %}
+        <p style="color:crimson;">API error: {{ error }}</p>
+        {% endif %}
+
+        <h2>Ingredients</h2>
+        <pre>{{ ingredients }}</pre>
+
+        <h2>Recipe</h2>
+        <pre>{{ recipe }}</pre>
+
+        <p><a href="/">Try another dish</a></p>
+    </div>
+</body>
+
+</html>
